@@ -37,7 +37,7 @@ SRC_URI = "git://github.com/soccentric-pinnacle/Pinnacle-Instrumentation.git;pro
 # this recipe was first written -- confirmed by an actual do_fetch
 # failure (exit code 128) the first time this SRC_URI was ever
 # actually fetched anywhere in the fleet.
-INSTR_SRCREV ?= "57ce931"
+INSTR_SRCREV ?= "8f495bfb31a2edefd7b06cb691c4f8830488b455"
 SRCREV = "${@d.getVar('AUTOREV') if d.getVar('PINNACLE_DEV_BUILD') == '1' else d.getVar('INSTR_SRCREV')}"
 # One version for the whole suite (REQ §2). This used to read PV from
 # S/VERSION via a python expression: PV -> S -> WORKDIR -> PV (WORKDIR's own
