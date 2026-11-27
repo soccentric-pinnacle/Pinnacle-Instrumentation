@@ -18,7 +18,7 @@ SRC_URI = "git://github.com/soccentric-pinnacle/Pinnacle-Instrumentation.git;pro
 # -- a release build must never silently float.
 # Held in its own variable: referencing SRCREV from inside SRCREV's own
 # expansion is self-referential and bitbake would recurse on it.
-INSTR_SRCREV ?= "3cb11e714ffbe6025732a3289ebbbbb8f4f9e5bd"
+INSTR_SRCREV ?= "491120b98e64ab19315def3d5dce976ed93049b2"
 SRCREV = "${@d.getVar('AUTOREV') if d.getVar('PINNACLE_DEV_BUILD') == '1' else d.getVar('INSTR_SRCREV')}"
 # One version for the whole suite (REQ §2). This used to read PV from
 # S/VERSION via a python expression: PV -> S -> WORKDIR -> PV (WORKDIR's own
